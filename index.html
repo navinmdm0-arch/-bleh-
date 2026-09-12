@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ava · 19th Birthday</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ==================== BESPOKE ROMANTIC ENTRANCE (100x BETTER) ==================== -->
+    <div id="loading-screen">
+        <!-- Interactive Warm Candlelight & Floating Petals Canvas -->
+        <canvas id="entrance-stars-canvas"></canvas>
+        <div class="entrance-ambient-glow"></div>
+
+        <div class="entrance-stage">
+            <div class="entrance-prelude">
+                <span class="prelude-rule"></span>
+                <span class="prelude-text">A 19th Birthday Universe &middot; For Ava</span>
+                <span class="prelude-rule"></span>
+            </div>
+            
+            <h1 class="entrance-title">Our roar roar <span class="penggi-gold">penggi</span></h1>
+            <p class="entrance-subtitle">a quiet universe for the prettiest girl &middot; straight two birthdays together</p>
+
+            <!-- Intimate Layered Keepsake Triptych (Tactile, Overlapping, Human) -->
+            <div class="entrance-keepsake-triptych">
+                <!-- Left Memory: Holding hands in gingham dress -->
+                <div class="triptych-card card-left">
+                    <div class="card-tape tape-left"></div>
+                    <div class="card-photo-frame">
+                        <img src="photos/IMG_7418.jpg" alt="Holding hands" loading="eager">
+                    </div>
+                    <div class="card-caption">with you always</div>
+                </div>
+
+                <!-- Center Hero Memory: Photoism booth mirror selfie with flowers -->
+                <div class="triptych-card card-center">
+                    <div class="card-pin"></div>
+                    <div class="card-photo-frame">
+                        <img src="photos/IMG_0592.jpg" alt="Photoism with flowers" loading="eager">
+                    </div>
+                    <div class="card-caption">photoism &middot; 19th</div>
+                </div>
+
+                <!-- Right Memory: Together in Japanese yukatas -->
+                <div class="triptych-card card-right">
+                    <div class="card-tape tape-right"></div>
+                    <div class="card-photo-frame">
+                        <img src="photos/IMG_8564.jpg" alt="Yukata birthday" loading="eager">
+                    </div>
+                    <div class="card-caption">straight 2 birthdays</div>
+                </div>
+            </div>
+
+            <!-- Warm Candlelight Progress & Enter Action -->
+            <div class="entrance-action-container">
+                <div class="starlight-loader-wrap" id="loader-progress-wrap">
+                    <div class="starlight-loader-track">
+                        <div class="starlight-loader-line" id="loader-line-fill"></div>
+                    </div>
+                </div>
+
+                <div class="entrance-action-wrap">
+                    <button id="enter-btn" class="bespoke-enter-btn hidden">
+                        <span class="btn-sparkle">✦</span>
+                        <span class="btn-text">Step Inside</span>
+                        <span class="btn-sparkle">✦</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== CLEAN EDITORIAL NAVIGATION ==================== -->
+    <header id="site-header">
+        <div class="header-inner">
+            <div class="brand">
+                <span class="brand-title">Ava's 19th</span>
+                <span class="brand-divider">/</span>
+                <span class="brand-sub">Navin</span>
+            </div>
+
+            <nav class="nav-links">
+                <button class="nav-btn active" data-page="galaxy-tree">Tree</button>
+                <button class="nav-btn" data-page="gallery">Photos <span class="count-pill">23</span></button>
+                <button class="nav-btn" data-page="birthday-letter">Letter</button>
+            </nav>
+
+            <div class="header-actions">
+                <button id="music-toggle" class="audio-btn" title="Toggle audio">
+                    <span class="audio-dot"></span>
+                    <span id="music-label">Audio</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== PAGE 1: GALAXY TREE (360°) ==================== -->
+    <section id="galaxy-tree" class="page active">
+        <div id="three-container"></div>
+
+        <!-- Floating Controls -->
+        <div class="tree-actions">
+            <button id="toggle-rotate" class="glass-btn active">
+                <span class="btn-dot"></span>
+                <span id="rotate-label">Rotate</span>
+            </button>
+            <button id="reset-cam" class="glass-btn">
+                <span>Reset</span>
+            </button>
+            <button id="toggle-deck" class="glass-btn">
+                <span>Photos</span>
+            </button>
+        </div>
+
+        <!-- Bottom Memory Strip -->
+        <div class="memory-strip" id="memory-dock">
+            <div class="strip-header">
+                <span class="strip-title">Our Memories</span>
+                <span class="strip-count">23 Photos</span>
+            </div>
+            <div class="strip-items" id="dock-scroll">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+
+        <!-- 3D Tooltip -->
+        <div id="tree-tooltip" class="tree-tooltip hidden">
+            <span class="tooltip-index">01</span>
+            <span class="tooltip-text">Memory</span>
+        </div>
+    </section>
+
+    <!-- ==================== PAGE 2: PHOTO WALL ==================== -->
+    <section id="gallery" class="page hidden">
+        <div class="gallery-wrapper">
+            <div class="gallery-lead">
+                <span class="sub-label">COLLECTION</span>
+                <h2>Our Story in Pictures</h2>
+                <p>23 uncropped memories of us together.</p>
+            </div>
+
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PAGE 3: VINTAGE BOTANICAL LETTER ==================== -->
+    <section id="birthday-letter" class="page hidden">
+        <!-- Ambient Candlelight & Drifting Petals Canvas -->
+        <canvas id="letter-ambient-canvas"></canvas>
+        <div class="letter-ambient-glow"></div>
+
+        <div class="letter-stage">
+            
+            <!-- Realistic 3D Physical Keepsake Envelope Scene -->
+            <div class="envelope-scene" id="envelope-wrapper">
+                <div class="envelope-3d-box" id="envelope-box">
+                    
+                    <!-- Back of Envelope (Interior Lining) -->
+                    <div class="envelope-back-interior"></div>
+
+                    <!-- Parchment Letter Inside Pocket (Slides Up) -->
+                    <div class="envelope-letter-peek" id="letter-peek">
+                        <div class="peek-crest">N &amp; A</div>
+                    </div>
+
+                    <!-- Envelope Pocket (Left, Right, Bottom Folds) -->
+                    <div class="envelope-pocket">
+                        <div class="pocket-fold pocket-fold-left"></div>
+                        <div class="pocket-fold pocket-fold-right"></div>
+                        <div class="pocket-fold pocket-fold-bottom"></div>
+                        
+                        <div class="envelope-calligraphy">
+                            <div class="calligraphy-to">For Ava</div>
+                            <div class="calligraphy-sub">with all my love &middot; from Navin</div>
+                        </div>
+                    </div>
+
+                    <!-- 3D Triangular Flap That Folds Down from Top -->
+                    <div class="envelope-flap-top" id="envelope-flap">
+                        <div class="flap-gold-edge"></div>
+                    </div>
+
+                    <!-- Sculpted 3D Crimson Wax Seal with Embossed Monogram -->
+                    <div class="envelope-wax-seal" id="seal-btn">
+                        <div class="seal-outer-rim">
+                            <div class="seal-inner-stamp">
+                                <span class="seal-monogram">N &amp; A</span>
+                                <span class="seal-sub">19</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Antique Parchment Letter with Museum-Quality Botanical Roses -->
+            <div class="letter-paper-wrap hidden" id="letter-card-container">
+                <article class="antique-parchment">
+                    <div class="parchment-content-area">
+                        <div class="letter-header-vintage">
+                            <div class="vintage-crest">
+                                <span class="crest-monogram">N &amp; A</span>
+                            </div>
+                            <div class="letter-meta-date">September 2026 &middot; Straight 2 Birthdays Together</div>
+                        </div>
+
+                        <h2 class="letter-salutation-vintage">Dear Avaa,</h2>
+
+                        <div class="letter-body-vintage">
+                            <!-- RAW EXACT UNEDITED LETTER PER INSTRUCTIONS -->
+                            <p id="letter-raw-text">
+Avaa:) we've been together na for a long time na, i just want to make u a website for us and also for our relationship that makes us happy:) Its really an special day for you and also for me na birthday mo. We've been fighting a lot (not really fighting to argue) na nagkakaproblems tayo palagi sa small things every single day because of me:( But i am really happy na we are still here in straight 2 birthdays mo. I just wanna celebrate for you and lagi mo ako pinapasaya even nasa toughest times ko. I just wanna say thank you na youre here for me always, and u trusted me so much and it was very special to me:) (sorry sa bad grammar ko) I am holding my tears lng rn na super grateful ako and very thankful ako sayo for everything, u were special and different person to me. Goodluckk avaa to your futures, i hope marami ka pa mafulfill para sa mom and dad mo, and even sa cute siblings mo. Lets help our family:) AGAIN, HAPPYY BIRTHDAYYYY:)
+                            </p>
+                        </div>
+
+                        <div class="letter-signoff-vintage">
+                            <div class="signoff-phrase">Forever grateful and with you always,</div>
+                            <div class="signoff-signature">Navin</div>
+                        </div>
+
+                        <div class="letter-actions-row">
+                            <button id="cake-btn" class="antique-wish-btn">
+                                <span class="btn-sparkle">✦</span>
+                                <span>Make a Birthday Wish</span>
+                                <span class="btn-sparkle">✦</span>
+                            </button>
+                            <button id="refold-letter-btn" class="antique-refold-btn" title="Fold letter back into envelope">
+                                <span>Fold Letter</span>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Wish Modal -->
+            <div id="cake-modal" class="wish-modal hidden">
+                <div class="wish-backdrop" id="close-modal-backdrop"></div>
+                <div class="wish-card">
+                    <div class="wish-card-crest">✦ 19 ✦</div>
+                    <h3>Happy 19th Birthday, Ava</h3>
+                    <p>May all your prayers, goals, and dreams for you and your family come true this year.</p>
+                    <button id="close-cake-btn" class="wish-close-btn">Close</button>
+                </div>
+            </div>
+
+        </div>
+        <canvas id="confetti-canvas"></canvas>
+    </section>
+
+    <!-- ==================== IMMERSIVE FULL-RESOLUTION LIGHTBOX ==================== -->
+    <div id="lightbox" class="lightbox hidden">
+        <div class="lb-backdrop" id="lb-backdrop"></div>
+        <div class="lb-content">
+            <header class="lb-top">
+                <span class="lb-index" id="lb-counter">01 / 23</span>
+                <button class="lb-close" id="lb-close" aria-label="Close">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                </button>
+            </header>
+
+            <div class="lb-view">
+                <button class="lb-arrow lb-prev" id="lb-prev" aria-label="Previous">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+                </button>
+                
+                <div class="lb-frame">
+                    <img id="lb-img" src="" alt="Memory">
+                </div>
+
+                <button class="lb-arrow lb-next" id="lb-next" aria-label="Next">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="CSS2DRenderer.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
