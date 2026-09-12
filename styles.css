@@ -1125,7 +1125,8 @@ html, body {
     right: 22px;
     height: 230px;
     background: #fbf5e6;
-    background-image: url('assets/parchment_bg.jpg');
+    background-image: url('parchment_bg.jpg');
+    background-image: url('assets/parchment_bg.jpg'), url('parchment_bg.jpg');
     background-size: cover;
     border-radius: 6px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35), inset 0 0 0 1px rgba(212, 175, 55, 0.3);
@@ -1370,7 +1371,8 @@ html, body {
     position: relative;
     width: 100%;
     max-width: 680px;
-    background-image: url('assets/parchment_bg.jpg');
+    background-image: url('parchment_bg.jpg');
+    background-image: url('assets/parchment_bg.jpg'), url('parchment_bg.jpg');
     background-size: 105% 103%;
     background-position: center;
     background-repeat: no-repeat;
